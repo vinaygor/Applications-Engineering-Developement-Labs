@@ -21,13 +21,14 @@ public class DisplayJPanel extends javax.swing.JPanel {
      * Creates new form DisplayJPanel
      */
     
-    private String imageURL;
-    private File file;
-    
+   
+   //defining object of class PersonalInformation 
     private PersonalInformation personalInformation;
     
     //Variables declaration
     private String firstName;
+    private String imageURL;
+    private File file;
     private String lastName;
     private String workExperience;
     private String affiliation;
@@ -60,13 +61,14 @@ public class DisplayJPanel extends javax.swing.JPanel {
         initComponents();
         this.personalInformation = personalInformation;
         
-        System.out.println(personalInformation.getFile());
+        //Function to display the content in the DisplayJpanel
         display();
         
         
     }
     public void display(){
         
+        //Method to collect the data using getters and display the contents using setters.
         getSetData();
         
 
@@ -90,6 +92,7 @@ public class DisplayJPanel extends javax.swing.JPanel {
     
     private void getSetData(){
         
+        //get data using get() methods
         firstName = personalInformation.getFirstName();
         lastName = personalInformation.getLastName();
         workExperience = personalInformation.getWorkExperience();
@@ -118,14 +121,19 @@ public class DisplayJPanel extends javax.swing.JPanel {
         degree3Date=personalInformation.education.getDegree3Date();
         university3=personalInformation.education.getUniversity3();
         
+        //set data using set() methods
         firstNameDisplayLabel.setText(firstName);
         lastNameDisplayLabel.setText(lastName);
         emailAddressDisplayLabel.setText(emailAddress);
         dateOfBirthDisplayLabel.setText(month+"/"+date+"/"+year);
         hobbiesDisplayLabel.setText(hobbies);
         
-        careerObjectiveDisplayLabel.setText(careerObjectiveStatement);
-        workExperienceDisplayingLabel1.setText(workExperience);
+        careerObjectiveDisplayArea.setText(careerObjectiveStatement);
+        careerObjectiveDisplayArea.setWrapStyleWord(true);
+        careerObjectiveDisplayArea.setLineWrap(true);
+        workExperienceDisplayArea.setText(workExperience);
+        workExperienceDisplayArea.setWrapStyleWord(true);
+        workExperienceDisplayArea.setLineWrap(true);
         degreeTitle1DisplayLabel.setText(degree1Title);
         degreeTitle2DisplayLabel.setText(degree2Title);
         degree3TitleDisplayLabel.setText(degree3Title);
@@ -171,14 +179,12 @@ public class DisplayJPanel extends javax.swing.JPanel {
         hobbiesLabel = new javax.swing.JLabel();
         hobbiesDisplayLabel = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        careerObjectiveDisplayLabel = new javax.swing.JLabel();
         personalInformationLabel1 = new javax.swing.JLabel();
         workExperienceLabel = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
         careerObjectiveLabel = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         workExperienceLabel1 = new javax.swing.JLabel();
-        workExperienceDisplayingLabel1 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
         workExperienceLabel2 = new javax.swing.JLabel();
         street1Label = new javax.swing.JLabel();
@@ -206,8 +212,14 @@ public class DisplayJPanel extends javax.swing.JPanel {
         degree3TitleDisplayLabel = new javax.swing.JLabel();
         degreeDate3DisplayLabel = new javax.swing.JLabel();
         university3DisplayLabel = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        careerObjectiveDisplayArea = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        workExperienceDisplayArea = new javax.swing.JTextArea();
 
         setLayout(new java.awt.BorderLayout());
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         dateOfBirthLabel.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         dateOfBirthLabel.setText("Date of Birth:");
@@ -239,9 +251,6 @@ public class DisplayJPanel extends javax.swing.JPanel {
 
         hobbiesDisplayLabel.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
 
-        careerObjectiveDisplayLabel.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        careerObjectiveDisplayLabel.setText("Career objective");
-
         personalInformationLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         personalInformationLabel1.setText("Personal Information");
 
@@ -253,9 +262,6 @@ public class DisplayJPanel extends javax.swing.JPanel {
 
         workExperienceLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         workExperienceLabel1.setText("Education History");
-
-        workExperienceDisplayingLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        workExperienceDisplayingLabel1.setText("Work Experience");
 
         workExperienceLabel2.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         workExperienceLabel2.setText("Address details");
@@ -316,15 +322,26 @@ public class DisplayJPanel extends javax.swing.JPanel {
 
         university3DisplayLabel.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
 
+        careerObjectiveDisplayArea.setEditable(false);
+        careerObjectiveDisplayArea.setColumns(20);
+        careerObjectiveDisplayArea.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        careerObjectiveDisplayArea.setRows(5);
+        careerObjectiveDisplayArea.setBorder(null);
+        careerObjectiveDisplayArea.setCaretColor(new java.awt.Color(255, 255, 255));
+        jScrollPane2.setViewportView(careerObjectiveDisplayArea);
+
+        workExperienceDisplayArea.setEditable(false);
+        workExperienceDisplayArea.setColumns(20);
+        workExperienceDisplayArea.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        workExperienceDisplayArea.setRows(5);
+        workExperienceDisplayArea.setBorder(null);
+        jScrollPane3.setViewportView(workExperienceDisplayArea);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(118, 118, 118)
-                .addComponent(careerObjectiveDisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 797, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(createResumeTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 643, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -400,9 +417,9 @@ public class DisplayJPanel extends javax.swing.JPanel {
                 .addGap(106, 106, 106)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(affiliationDisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 772, Short.MAX_VALUE)
+                        .addComponent(affiliationDisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 1305, Short.MAX_VALUE)
                         .addGap(29, 29, 29))
-                    .addComponent(computerSkillsDisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 801, Short.MAX_VALUE))
+                    .addComponent(computerSkillsDisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 1334, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(89, 89, 89)
@@ -415,29 +432,30 @@ public class DisplayJPanel extends javax.swing.JPanel {
                     .addComponent(degreeTitle2DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(degreeDate2DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(university2DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(297, 297, 297)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(degree3TitleDisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(degreeDate3DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(university3DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 822, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(113, 113, 113)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 822, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(25, 25, 25)
                     .addComponent(personalInformationLabel1)
-                    .addContainerGap(926, Short.MAX_VALUE)))
+                    .addContainerGap(1459, Short.MAX_VALUE)))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(35, 35, 35)
                     .addComponent(careerObjectiveLabel)
-                    .addContainerGap(977, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(117, 117, 117)
-                    .addComponent(workExperienceDisplayingLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 797, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(323, Short.MAX_VALUE)))
+                    .addContainerGap(1510, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -476,13 +494,15 @@ public class DisplayJPanel extends javax.swing.JPanel {
                     .addComponent(hobbiesDisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
-                .addComponent(careerObjectiveDisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(84, 84, 84)
+                .addGap(112, 112, 112)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(workExperienceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(353, 353, 353)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(workExperienceLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -501,16 +521,15 @@ public class DisplayJPanel extends javax.swing.JPanel {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(degreeDate2DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(50, 50, 50))
-                        .addComponent(university2DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(degree3TitleDisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(degreeDate3DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50))
-                    .addComponent(university3DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
+                        .addComponent(university2DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(degree3TitleDisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(degreeDate3DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(50, 50, 50))
+                        .addComponent(university3DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(158, 158, 158)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(workExperienceLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -563,11 +582,6 @@ public class DisplayJPanel extends javax.swing.JPanel {
                     .addGap(526, 526, 526)
                     .addComponent(careerObjectiveLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(2388, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(1067, 1067, 1067)
-                    .addComponent(workExperienceDisplayingLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(1637, Short.MAX_VALUE)))
         );
 
         jScrollPane1.setViewportView(jPanel1);
@@ -579,7 +593,7 @@ public class DisplayJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel affiliationDisplayLabel;
     private javax.swing.JLabel affiliationLabel;
-    private javax.swing.JLabel careerObjectiveDisplayLabel;
+    private javax.swing.JTextArea careerObjectiveDisplayArea;
     private javax.swing.JLabel careerObjectiveLabel;
     private javax.swing.JLabel cityDisplayLabel;
     private javax.swing.JLabel cityLabel;
@@ -605,6 +619,8 @@ public class DisplayJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel imageDisplayer;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -622,7 +638,7 @@ public class DisplayJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel university1DisplayLabel;
     private javax.swing.JLabel university2DisplayLabel;
     private javax.swing.JLabel university3DisplayLabel;
-    private javax.swing.JLabel workExperienceDisplayingLabel1;
+    private javax.swing.JTextArea workExperienceDisplayArea;
     private javax.swing.JLabel workExperienceLabel;
     private javax.swing.JLabel workExperienceLabel1;
     private javax.swing.JLabel workExperienceLabel2;

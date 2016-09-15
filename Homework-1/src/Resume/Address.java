@@ -11,13 +11,14 @@ package Resume;
  */
 public class Address {
 
+//Declaring attributes of class Address
 private String street1;    
 private String street2;
 private String city;
 private String country;
 private String zipCode;
 
-
+//Defining getters and setters
     public String getStreet1() {
         return street1;
     }

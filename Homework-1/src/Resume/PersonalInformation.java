@@ -12,13 +12,16 @@ import java.io.File;
  */
 public class PersonalInformation {
     
+    //defining the objects for class Address and class Education.
     public Address address;
     public Education education;
     public PersonalInformation(){
+        //instantiating the objects for class Address and class Education
         address = new Address();
         education = new Education();
     }
     
+    //Declaring attributes of class PersonalInformation
     private String firstName;
     private String lastName;
     private String affiliation;
@@ -34,6 +37,7 @@ public class PersonalInformation {
     private String year;
     private String workExperience;
 
+    //defining getters and setters for different attributes
     public String getWorkExperience() {
         return workExperience;
     }

@@ -11,6 +11,7 @@ package Resume;
  */
 public class Education {
     
+    //Declaring attributes of class Education
     private String degree1Title;
     private String degree1Date;
     private String university1;
@@ -21,6 +22,7 @@ public class Education {
     private String degree3Date;
     private String university3;
 
+    //Defining getters and setters for differen attributes
     public String getDegree1Title() {
         return degree1Title;
     }
