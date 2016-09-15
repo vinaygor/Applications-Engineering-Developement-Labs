@@ -11,7 +11,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,7,-115,0,0,4,-8"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,9,125,0,0,4,-7"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
@@ -101,7 +101,7 @@
                                   <Component id="firstNameTextField" alignment="0" min="-2" pref="195" max="-2" attributes="0"/>
                                   <Component id="lastNameTextField" alignment="0" min="-2" pref="195" max="-2" attributes="0"/>
                                   <Component id="emailAddressTextField" alignment="0" min="-2" pref="195" max="-2" attributes="0"/>
-                                  <Component id="careerObjectiveTextArea" min="-2" pref="350" max="-2" attributes="0"/>
+                                  <Component id="workExperienceTextArea" min="-2" pref="350" max="-2" attributes="0"/>
                                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                       <Component id="linkedINProfileLinkTextField" alignment="1" min="-2" pref="195" max="-2" attributes="0"/>
                                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
@@ -130,22 +130,25 @@
                                   </Group>
                                   <Component id="affiliationTextField" alignment="0" min="-2" pref="199" max="-2" attributes="0"/>
                                   <Component id="imageAttachButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="careerObjectiveTextArea" min="-2" pref="350" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="imageURLTextField" alignment="0" min="-2" pref="655" max="-2" attributes="0"/>
-                          <Component id="addressInformationLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="imageURLTextField" min="-2" pref="655" max="-2" attributes="0"/>
+                          <Component id="addressInformationLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="workExperienceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Component id="firstNameLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="1130" max="32767" attributes="0"/>
+                          <EmptySpace pref="1131" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -243,7 +246,7 @@
                                                   <Component id="university1Name" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   <Component id="university1TextField" alignment="1" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                                              <EmptySpace pref="152" max="32767" attributes="0"/>
                                               <Component id="degree1Label1" min="-2" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" attributes="0">
@@ -267,43 +270,50 @@
                                                           </Group>
                                                           <Component id="degree2DateLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <EmptySpace pref="84" max="32767" attributes="0"/>
+                                                      <EmptySpace pref="221" max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <Component id="degree3Label" min="-2" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" attributes="0">
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Group type="102" alignment="1" attributes="0">
-                                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                                  <Component id="degreeTitle3TextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                                  <Component id="degree3TitleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                              </Group>
-                                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                              <Component id="degree3DateTextField" min="-2" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Component id="degree3DateLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="1" attributes="0">
                                                       <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="university3TextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="university3Name" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="degreeTitle3TextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="degree3TitleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="careerObjectiveTextArea" min="-2" pref="104" max="-2" attributes="0"/>
-                                                          <Component id="careerObjectiveLabel" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace pref="63" max="32767" attributes="0"/>
-                                                      <Component id="streetname1TextField" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="degree3DateTextField" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Group type="102" attributes="0">
-                                                      <EmptySpace max="32767" attributes="0"/>
-                                                      <Component id="streetName1Label" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
+                                                  <Component id="degree3DateLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="streetname2TextField" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="university3TextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="university3Name" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                                      <Component id="careerObjectiveLabel" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                                      <Component id="careerObjectiveTextArea" min="-2" pref="104" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace pref="49" max="32767" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="workExperienceLabel" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="streetname1TextField" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="streetName1Label" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="streetname2TextField" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="workExperienceTextArea" min="-2" pref="104" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
                                           <Component id="streetName2Label" min="-2" max="-2" attributes="0"/>
                                       </Group>
@@ -332,14 +342,16 @@
                           <Component id="affiliationTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="hobbiesLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="16" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       <Component id="addressInformationLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="imageURLTextField" min="-2" max="-2" attributes="0"/>
                           <Component id="imageAttachButton" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="resetButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="createResumeButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -349,7 +361,7 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
                           <Component id="firstNameLabel" min="-2" pref="32" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="1842" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="2293" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -369,7 +381,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="First Name:"/>
+                <Property name="text" type="java.lang.String" value="First Name*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lastNameLabel">
@@ -377,7 +389,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Last Name:"/>
+                <Property name="text" type="java.lang.String" value="Last Name*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="emailAddressLabel">
@@ -385,7 +397,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Email Address:"/>
+                <Property name="text" type="java.lang.String" value="Email Address*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="emailAddressLabel1">
@@ -401,7 +413,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Month:"/>
+                <Property name="text" type="java.lang.String" value="Month(1-12)*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="dateLabel">
@@ -409,7 +421,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Date:"/>
+                <Property name="text" type="java.lang.String" value="Date*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="yearLabel">
@@ -417,7 +429,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Year:"/>
+                <Property name="text" type="java.lang.String" value="Year*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="phoneNumberLabel">
@@ -425,7 +437,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Phone number(cell):"/>
+                <Property name="text" type="java.lang.String" value="Phone number(cell)*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="phoneNumberLabel1">
@@ -433,7 +445,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Computer Skills known:"/>
+                <Property name="text" type="java.lang.String" value="Computer Skills known*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="linkedInProfileLinkLabel">
@@ -441,7 +453,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="LinkedIn Profile Link:"/>
+                <Property name="text" type="java.lang.String" value="LinkedIn Profile Link*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="educationHistoryLabel">
@@ -481,7 +493,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Career Objective:"/>
+                <Property name="text" type="java.lang.String" value="Career Objective*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="streetName1Label">
@@ -489,7 +501,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Address Street Name 1:"/>
+                <Property name="text" type="java.lang.String" value="Address Street Name 1*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="streetName2Label">
@@ -497,7 +509,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Street Name 2:"/>
+                <Property name="text" type="java.lang.String" value="Street Name 2*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="cityLabel">
@@ -505,7 +517,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="City:"/>
+                <Property name="text" type="java.lang.String" value="City*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="countryLabel">
@@ -513,7 +525,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Country:"/>
+                <Property name="text" type="java.lang.String" value="Country*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="zipCodeLabel">
@@ -521,7 +533,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Zip Code:"/>
+                <Property name="text" type="java.lang.String" value="Zip Code*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="degree1Label">
@@ -529,7 +541,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="3"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Degree 1:"/>
+                <Property name="text" type="java.lang.String" value="Degree 1*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="degree2TitleLabel">
@@ -609,7 +621,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Upload Image"/>
+                <Property name="text" type="java.lang.String" value="Upload Image*"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="createResumeButton">
@@ -648,6 +660,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Attach file"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="imageAttachButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="firstNameTextField">
               <Properties>
@@ -889,7 +904,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hobbiesTextFieldActionPerformed"/>
               </Events>
             </Component>
-            <Component class="java.awt.TextArea" name="careerObjectiveTextArea">
+            <Component class="java.awt.TextArea" name="workExperienceTextArea">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
@@ -901,7 +916,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="24" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Affiliations:"/>
+                <Property name="text" type="java.lang.String" value="Affiliations*:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="affiliationTextField">
@@ -913,6 +928,32 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="affiliationTextFieldActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Verdana" size="16" style="2"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="33" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Fields marked with * are mandatory"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="workExperienceLabel">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Verdana" size="24" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Work Experience*:"/>
+              </Properties>
+            </Component>
+            <Component class="java.awt.TextArea" name="careerObjectiveTextArea">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Verdana" size="24" style="0"/>
+                </Property>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>

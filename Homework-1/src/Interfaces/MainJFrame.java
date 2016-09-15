@@ -125,7 +125,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void displayResumeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayResumeButtonActionPerformed
         // TODO add your handling code here:
-        DisplayJPanel displayJPanel = new DisplayJPanel();
+        DisplayJPanel displayJPanel = new DisplayJPanel(personalInformation);
         splitPane.setRightComponent(displayJPanel);
     }//GEN-LAST:event_displayResumeButtonActionPerformed
 

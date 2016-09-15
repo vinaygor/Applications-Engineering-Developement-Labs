@@ -12,8 +12,8 @@ import java.io.File;
  */
 public class PersonalInformation {
     
-    private Address address;
-    private Education education;
+    public Address address;
+    public Education education;
     public PersonalInformation(){
         address = new Address();
         education = new Education();
@@ -32,9 +32,15 @@ public class PersonalInformation {
     private String month;
     private String date;
     private String year;
-    private String degreeTitle;
-    private String degreeDate;
-    private String university;
+    private String workExperience;
+
+    public String getWorkExperience() {
+        return workExperience;
+    }
+
+    public void setWorkExperience(String workExperience) {
+        this.workExperience = workExperience;
+    }
 
 
     public String getMonth() {
