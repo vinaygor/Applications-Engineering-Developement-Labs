@@ -128,18 +128,18 @@ public class CreateJPanel extends javax.swing.JPanel {
         degreeTitle3TextField = new javax.swing.JTextField();
         degree3DateTextField = new javax.swing.JTextField();
         university3TextField = new javax.swing.JTextField();
-        cityTextField = new javax.swing.JTextField();
-        streetname2TextField = new javax.swing.JTextField();
-        streetname1TextField = new javax.swing.JTextField();
-        countryTextField = new javax.swing.JTextField();
-        zipCodeTextField = new javax.swing.JTextField();
-        hobbiesTextField = new javax.swing.JTextField();
         workExperienceTextArea = new java.awt.TextArea();
         hobbiesLabel1 = new javax.swing.JLabel();
-        affiliationTextField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         workExperienceLabel = new javax.swing.JLabel();
         careerObjectiveTextArea = new java.awt.TextArea();
+        streetname1TextField = new javax.swing.JTextField();
+        streetname2TextField = new javax.swing.JTextField();
+        cityTextField = new javax.swing.JTextField();
+        countryTextField = new javax.swing.JTextField();
+        zipCodeTextField = new javax.swing.JTextField();
+        hobbiesTextField = new javax.swing.JTextField();
+        affiliationTextField = new javax.swing.JTextField();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -391,10 +391,24 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
-        cityTextField.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
-        cityTextField.addActionListener(new java.awt.event.ActionListener() {
+        workExperienceTextArea.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+
+        hobbiesLabel1.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        hobbiesLabel1.setText("Affiliations*:");
+
+        jLabel1.setFont(new java.awt.Font("Verdana", 2, 16)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 51, 0));
+        jLabel1.setText("Fields marked with * are mandatory");
+
+        workExperienceLabel.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        workExperienceLabel.setText("Work Experience*:");
+
+        careerObjectiveTextArea.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+
+        streetname1TextField.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        streetname1TextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cityTextFieldActionPerformed(evt);
+                streetname1TextFieldActionPerformed(evt);
             }
         });
 
@@ -405,10 +419,10 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
-        streetname1TextField.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
-        streetname1TextField.addActionListener(new java.awt.event.ActionListener() {
+        cityTextField.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        cityTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                streetname1TextFieldActionPerformed(evt);
+                cityTextFieldActionPerformed(evt);
             }
         });
 
@@ -433,11 +447,6 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
-        workExperienceTextArea.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
-
-        hobbiesLabel1.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
-        hobbiesLabel1.setText("Affiliations*:");
-
         affiliationTextField.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         affiliationTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -445,19 +454,87 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Verdana", 2, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 51, 0));
-        jLabel1.setText("Fields marked with * are mandatory");
-
-        workExperienceLabel.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
-        workExperienceLabel.setText("Work Experience*:");
-
-        careerObjectiveTextArea.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lastNameLabel)
+                                .addComponent(emailAddressLabel)
+                                .addComponent(dateLabel)
+                                .addComponent(yearLabel)
+                                .addComponent(phoneNumberLabel)
+                                .addComponent(phoneNumberLabel1)
+                                .addComponent(linkedInProfileLinkLabel)
+                                .addComponent(degree1TitleLabel)
+                                .addComponent(degree1DateLabel)
+                                .addComponent(university1Name)
+                                .addComponent(degree2TitleLabel)
+                                .addComponent(degree2DateLabel)
+                                .addComponent(university2Name)
+                                .addComponent(degree3TitleLabel)
+                                .addComponent(degree3DateLabel)
+                                .addComponent(university3Name)
+                                .addComponent(careerObjectiveLabel)
+                                .addComponent(streetName1Label)
+                                .addComponent(streetName2Label)
+                                .addComponent(cityLabel)
+                                .addComponent(countryLabel)
+                                .addComponent(zipCodeLabel)
+                                .addComponent(hobbiesLabel))
+                            .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(monthLabel)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(educationHistoryLabel)
+                                        .addComponent(emailAddressLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(createResumeTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(degree1Label)
+                            .addComponent(degree1Label1)
+                            .addComponent(degree3Label)
+                            .addComponent(hobbiesLabel1))
+                        .addGap(766, 766, 766)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(workExperienceTextArea, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(imageAttachButton)
+                    .addComponent(careerObjectiveTextArea, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(university3TextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 339, Short.MAX_VALUE)
+                        .addComponent(degree3DateTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(degreeTitle3TextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(university2TextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(degree2DateTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(degreeTitle2TextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(university1TextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(degree1DateTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(degreeTitle1TextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(linkedINProfileLinkTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(computerSkillsTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(phoneNumberTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(yearTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(dateTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(monthTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(emailAddressTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lastNameTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(firstNameTextField, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(streetname1TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(streetname2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(countryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(zipCodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hobbiesTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(affiliationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(21, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -465,88 +542,6 @@ public class CreateJPanel extends javax.swing.JPanel {
                         .addComponent(createResumeButton)
                         .addGap(83, 83, 83)
                         .addComponent(resetButton))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lastNameLabel)
-                                        .addComponent(emailAddressLabel)
-                                        .addComponent(dateLabel)
-                                        .addComponent(yearLabel)
-                                        .addComponent(phoneNumberLabel)
-                                        .addComponent(phoneNumberLabel1)
-                                        .addComponent(linkedInProfileLinkLabel)
-                                        .addComponent(degree1TitleLabel)
-                                        .addComponent(degree1DateLabel)
-                                        .addComponent(university1Name)
-                                        .addComponent(degree2TitleLabel)
-                                        .addComponent(degree2DateLabel)
-                                        .addComponent(university2Name)
-                                        .addComponent(degree3TitleLabel)
-                                        .addComponent(degree3DateLabel)
-                                        .addComponent(university3Name)
-                                        .addComponent(careerObjectiveLabel)
-                                        .addComponent(streetName1Label)
-                                        .addComponent(streetName2Label)
-                                        .addComponent(cityLabel)
-                                        .addComponent(countryLabel)
-                                        .addComponent(zipCodeLabel)
-                                        .addComponent(hobbiesLabel))
-                                    .addGap(0, 0, Short.MAX_VALUE))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(monthLabel)
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(educationHistoryLabel)
-                                                .addComponent(emailAddressLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(createResumeTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(degree1Label)
-                                    .addComponent(degree1Label1)
-                                    .addComponent(degree3Label)
-                                    .addComponent(hobbiesLabel1))
-                                .addGap(766, 766, 766)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(monthTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(yearTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(firstNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lastNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(emailAddressTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(workExperienceTextArea, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(linkedINProfileLinkTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(computerSkillsTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-                                    .addComponent(phoneNumberTextField, javax.swing.GroupLayout.Alignment.LEADING)))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(degree3DateTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-                                .addComponent(degreeTitle3TextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(university2TextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(degree2DateTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(degreeTitle2TextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(university1TextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(degree1DateTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(university3TextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(degreeTitle1TextField, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(hobbiesTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
-                                .addComponent(zipCodeTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(countryTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(cityTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(streetname2TextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(streetname1TextField, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(affiliationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(imageAttachButton)
-                            .addComponent(careerObjectiveTextArea, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(21, 21, 21))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(imageURLTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(addressInformationLabel1)
                     .addComponent(jLabel1)
@@ -563,140 +558,143 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(createResumeTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(firstNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(hobbiesTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(76, 76, 76))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(firstNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(lastNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lastNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(emailAddressTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(emailAddressLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(lastNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lastNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(emailAddressTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(emailAddressLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(37, 37, 37)
-                                                .addComponent(monthTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(monthLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                                        .addGap(37, 37, 37)
+                                                        .addComponent(monthTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(monthLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                            .addComponent(dateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addComponent(dateLabel))
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                            .addComponent(yearTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addComponent(yearLabel))
+                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                    .addComponent(dateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                    .addComponent(dateLabel))
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                    .addComponent(yearTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                    .addComponent(yearLabel))
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(phoneNumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                            .addComponent(phoneNumberLabel, javax.swing.GroupLayout.Alignment.TRAILING))
                                                         .addGap(18, 18, 18)
-                                                        .addComponent(phoneNumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addComponent(phoneNumberLabel, javax.swing.GroupLayout.Alignment.TRAILING))
-                                                .addGap(18, 18, 18)
-                                                .addComponent(computerSkillsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(phoneNumberLabel1, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                                        .addComponent(computerSkillsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(phoneNumberLabel1, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(emailAddressLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(linkedINProfileLinkTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(linkedInProfileLinkLabel))
+                                .addGap(21, 21, 21)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(emailAddressLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(linkedINProfileLinkTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(linkedInProfileLinkLabel))
-                        .addGap(21, 21, 21)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(educationHistoryLabel)
-                                .addGap(8, 8, 8)
-                                .addComponent(degree1Label)
-                                .addGap(0, 0, 0)
-                                .addComponent(degree1TitleLabel))
-                            .addComponent(degreeTitle1TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(33, 33, 33)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(degree1DateLabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(degree1DateTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(48, 48, 48)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(university1Name, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(university1TextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(degree1Label1)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(150, 150, 150)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(university2Name)
-                                    .addComponent(university2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(12, 12, 12))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(16, 16, 16)
+                                        .addComponent(educationHistoryLabel)
+                                        .addGap(8, 8, 8)
+                                        .addComponent(degree1Label)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(degree1TitleLabel))
+                                    .addComponent(degreeTitle1TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(33, 33, 33)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(degree1DateLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(degree1DateTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(48, 48, 48)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(university1Name, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(university1TextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(degree1Label1)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(150, 150, 150)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(degreeTitle2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(degree2TitleLabel))
-                                        .addGap(28, 28, 28)
-                                        .addComponent(degree2DateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(degree2DateLabel, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addComponent(degree3Label)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(degreeTitle3TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(degree3TitleLabel))
-                                .addGap(18, 18, 18)
-                                .addComponent(degree3DateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(degree3DateLabel, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(university2Name)
+                                            .addComponent(university2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(16, 16, 16)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                    .addComponent(degreeTitle2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(degree2TitleLabel))
+                                                .addGap(28, 28, 28)
+                                                .addComponent(degree2DateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(degree2DateLabel, javax.swing.GroupLayout.Alignment.TRAILING))))
+                                .addGap(12, 12, 12)
+                                .addComponent(degree3Label)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                    .addComponent(degreeTitle3TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(degree3TitleLabel))
+                                                .addGap(18, 18, 18)
+                                                .addComponent(degree3DateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(degree3DateLabel, javax.swing.GroupLayout.Alignment.TRAILING))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(university3TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(university3Name))
+                                        .addGap(38, 38, 38)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(careerObjectiveTextArea, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(careerObjectiveLabel))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(workExperienceLabel)
+                                                            .addComponent(workExperienceTextArea, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGap(109, 109, 109)
+                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                            .addComponent(streetName1Label)
+                                                            .addComponent(streetname1TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(streetname2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(streetName2Label, javax.swing.GroupLayout.Alignment.TRAILING))
+                                                .addGap(16, 16, 16)
+                                                .addComponent(cityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(cityLabel))
+                                        .addGap(22, 22, 22)
+                                        .addComponent(countryLabel))
+                                    .addComponent(countryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(16, 16, 16)
+                                .addComponent(zipCodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(zipCodeLabel))
+                        .addGap(23, 23, 23)
+                        .addComponent(hobbiesLabel)
+                        .addGap(28, 28, 28)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(university3TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(university3Name))
-                        .addGap(38, 38, 38)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(careerObjectiveTextArea, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(careerObjectiveLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                            .addComponent(workExperienceLabel)
-                                            .addGap(109, 109, 109)
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(streetname1TextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(streetName1Label, javax.swing.GroupLayout.Alignment.TRAILING))
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(streetname2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(workExperienceTextArea, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(streetName2Label, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(cityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(cityLabel, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(countryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(countryLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(zipCodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(zipCodeLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(hobbiesTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hobbiesLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(affiliationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hobbiesLabel1))
-                .addGap(28, 28, 28)
+                            .addComponent(hobbiesLabel1)
+                            .addComponent(affiliationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)))
                 .addComponent(addressInformationLabel1)
                 .addGap(34, 34, 34)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -781,7 +779,7 @@ public class CreateJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please fill in all Mandatory fields", "Fields Empty!", 1);
             return false;
         }
-         else if(!emailAddress.contains("@") || !emailAddress.contains(".")){
+         else if(!emailAddress.contains("@") || !emailAddress.contains(".") || emailAddress.contains(" ")){
                 JOptionPane.showMessageDialog(null, "Invalid Email Address", "Invalid Input!", 2); return false;}
             else if(!month.matches("[0-9]+")&& month.length()>2 || !year.matches("[0-9]+") && year.length() > 4 || !date.matches("[0-9]+")&& date.length()>2){    
                 JOptionPane.showMessageDialog(null, "Birth details are incorrect", "Birth information incorrect!", 2); return false;}
@@ -824,7 +822,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         personalInformation.setAffiliation(affiliation);
         personalInformation.setFile(f);
         personalInformation.setWorkExperience(workExperience);
-        
+        personalInformation.setComputerSkills(computerSkills);
         
         
         
@@ -936,17 +934,30 @@ public class CreateJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_university3TextFieldActionPerformed
 
-    private void cityTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cityTextFieldActionPerformed
+    private void imageAttachButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageAttachButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cityTextFieldActionPerformed
+        JFileChooser jFileChooser = new JFileChooser();
+        jFileChooser.showOpenDialog(null);
+        f =jFileChooser.getSelectedFile();
+        String fileName=f.getAbsolutePath();
+        imageURLTextField.setText(fileName);
+    }//GEN-LAST:event_imageAttachButtonActionPerformed
+
+    private void computerSkillsTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_computerSkillsTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_computerSkillsTextFieldActionPerformed
+
+    private void streetname1TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_streetname1TextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_streetname1TextFieldActionPerformed
 
     private void streetname2TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_streetname2TextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_streetname2TextFieldActionPerformed
 
-    private void streetname1TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_streetname1TextFieldActionPerformed
+    private void cityTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cityTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_streetname1TextFieldActionPerformed
+    }//GEN-LAST:event_cityTextFieldActionPerformed
 
     private void countryTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_countryTextFieldActionPerformed
         // TODO add your handling code here:
@@ -963,19 +974,6 @@ public class CreateJPanel extends javax.swing.JPanel {
     private void affiliationTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_affiliationTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_affiliationTextFieldActionPerformed
-
-    private void imageAttachButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageAttachButtonActionPerformed
-        // TODO add your handling code here:
-        JFileChooser jFileChooser = new JFileChooser();
-        jFileChooser.showOpenDialog(null);
-        f =jFileChooser.getSelectedFile();
-        String fileName=f.getAbsolutePath();
-        imageURLTextField.setText(fileName);
-    }//GEN-LAST:event_imageAttachButtonActionPerformed
-
-    private void computerSkillsTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_computerSkillsTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_computerSkillsTextFieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

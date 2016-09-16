@@ -8,6 +8,8 @@ import Resume.*;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
@@ -55,6 +57,7 @@ public class DisplayJPanel extends javax.swing.JPanel {
     private String degree3Title;
     private String degree3Date;
     private String university3;
+    private String strDate;
     
     
     public DisplayJPanel(PersonalInformation personalInformation) {
@@ -134,15 +137,28 @@ public class DisplayJPanel extends javax.swing.JPanel {
         workExperienceDisplayArea.setText(workExperience);
         workExperienceDisplayArea.setWrapStyleWord(true);
         workExperienceDisplayArea.setLineWrap(true);
+        degreeMain1DisplayLabel.setText("Degree 1");
         degreeTitle1DisplayLabel.setText(degree1Title);
-        degreeTitle2DisplayLabel.setText(degree2Title);
-        degree3TitleDisplayLabel.setText(degree3Title);
+        degree1Date= "Issued on "+ degree1Date;
         degreeDate1DisplayLabel.setText(degree1Date);
-        degreeDate2DisplayLabel.setText(degree2Date);
-        degreeDate3DisplayLabel.setText(degree3Date);
         university1DisplayLabel.setText(university1);
-        university2DisplayLabel.setText(university2);
-        university3DisplayLabel.setText(university3);
+        
+        if(!degree2Title.isEmpty()&& !degree2Date.isEmpty()&& !university2.isEmpty())
+        {
+            degreeMain2DisplayLabel.setText("Degree 2");
+            degreeTitle2DisplayLabel.setText(degree2Title);
+            degree2Date= "Issued on "+ degree2Date;
+            degreeDate2DisplayLabel.setText(degree2Date);
+            university2DisplayLabel.setText(university2);
+        }
+        
+        if(!degree3Title.isEmpty()&&!degree3Date.isEmpty()&&!university3.isEmpty())
+        {
+            degreeMain3DisplayLabel.setText("Degree 3");
+            degree3TitleDisplayLabel.setText(degree3Title);
+            degreeDate3DisplayLabel.setText(degree3Date);
+            university3DisplayLabel.setText(university3);
+        }
         
         street1DisplayLabel.setText(street1);
         street2DisplayLabel.setText(street2);
@@ -152,6 +168,13 @@ public class DisplayJPanel extends javax.swing.JPanel {
         
         computerSkillsDisplayLabel.setText(computerSkills);
         affiliationDisplayLabel.setText(affiliation);
+        
+        // To fetch the current date.
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yy");
+
+        strDate = sdf.format(date);
+        dateDisplayLabel.setText(strDate);
     }
 
     /**
@@ -216,6 +239,13 @@ public class DisplayJPanel extends javax.swing.JPanel {
         careerObjectiveDisplayArea = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
         workExperienceDisplayArea = new javax.swing.JTextArea();
+        degreeMain1DisplayLabel = new javax.swing.JLabel();
+        degreeMain2DisplayLabel = new javax.swing.JLabel();
+        degreeMain3DisplayLabel = new javax.swing.JLabel();
+        dateLabel = new javax.swing.JLabel();
+        dateDisplayLabel = new javax.swing.JLabel();
+        placeLabel = new javax.swing.JLabel();
+        dateDisplayLabel1 = new javax.swing.JLabel();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -337,6 +367,23 @@ public class DisplayJPanel extends javax.swing.JPanel {
         workExperienceDisplayArea.setBorder(null);
         jScrollPane3.setViewportView(workExperienceDisplayArea);
 
+        degreeMain1DisplayLabel.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+
+        degreeMain2DisplayLabel.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+
+        degreeMain3DisplayLabel.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+
+        dateLabel.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        dateLabel.setText("Date: ");
+
+        dateDisplayLabel.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+
+        placeLabel.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        placeLabel.setText("Place:");
+
+        dateDisplayLabel1.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        dateDisplayLabel1.setText("______________");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -411,41 +458,54 @@ public class DisplayJPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(117, 117, 117)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(computerSkillsLabel)
-                    .addComponent(affiliationLabel))
-                .addGap(106, 106, 106)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(affiliationDisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 1305, Short.MAX_VALUE)
-                        .addGap(29, 29, 29))
-                    .addComponent(computerSkillsDisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 1334, Short.MAX_VALUE))
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(degreeTitle1DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(degreeDate1DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(university1DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(degreeTitle2DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(degreeDate2DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(university2DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(degree3TitleDisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(degreeDate3DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(university3DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(117, 117, 117)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 822, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(113, 113, 113)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 822, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(101, 101, 101)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(degreeTitle1DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(degreeDate1DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(university1DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(degreeMain1DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(degreeTitle2DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(degreeDate2DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(university2DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(degreeMain2DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(degree3TitleDisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(degreeDate3DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(university3DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(degreeMain3DisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(dateLabel)
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(computerSkillsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(affiliationLabel)
+                            .addComponent(dateDisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(106, 106, 106)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(affiliationDisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 1305, Short.MAX_VALUE)
+                                .addGap(29, 29, 29))
+                            .addComponent(computerSkillsDisplayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 1334, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(placeLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(dateDisplayLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(25, 25, 25)
@@ -506,6 +566,11 @@ public class DisplayJPanel extends javax.swing.JPanel {
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(workExperienceLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(degreeMain1DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(degreeMain2DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(degreeMain3DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -529,7 +594,7 @@ public class DisplayJPanel extends javax.swing.JPanel {
                             .addComponent(degreeDate3DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(50, 50, 50))
                         .addComponent(university3DisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(158, 158, 158)
+                .addGap(94, 94, 94)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(workExperienceLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -571,17 +636,25 @@ public class DisplayJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(affiliationLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(affiliationDisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(623, Short.MAX_VALUE))
+                .addGap(84, 84, 84)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dateDisplayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(placeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dateDisplayLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(300, 300, 300))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(141, 141, 141)
                     .addComponent(personalInformationLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(2773, Short.MAX_VALUE)))
+                    .addContainerGap(2916, Short.MAX_VALUE)))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(526, 526, 526)
                     .addComponent(careerObjectiveLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(2388, Short.MAX_VALUE)))
+                    .addContainerGap(2531, Short.MAX_VALUE)))
         );
 
         jScrollPane1.setViewportView(jPanel1);
@@ -602,12 +675,18 @@ public class DisplayJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel countryDisplayLabel;
     private javax.swing.JLabel countryLabel;
     private javax.swing.JLabel createResumeTitleLabel;
+    private javax.swing.JLabel dateDisplayLabel;
+    private javax.swing.JLabel dateDisplayLabel1;
+    private javax.swing.JLabel dateLabel;
     private javax.swing.JLabel dateOfBirthDisplayLabel;
     private javax.swing.JLabel dateOfBirthLabel;
     private javax.swing.JLabel degree3TitleDisplayLabel;
     private javax.swing.JLabel degreeDate1DisplayLabel;
     private javax.swing.JLabel degreeDate2DisplayLabel;
     private javax.swing.JLabel degreeDate3DisplayLabel;
+    private javax.swing.JLabel degreeMain1DisplayLabel;
+    private javax.swing.JLabel degreeMain2DisplayLabel;
+    private javax.swing.JLabel degreeMain3DisplayLabel;
     private javax.swing.JLabel degreeTitle1DisplayLabel;
     private javax.swing.JLabel degreeTitle2DisplayLabel;
     private javax.swing.JLabel emailAddressDisplayLabel;
@@ -631,6 +710,7 @@ public class DisplayJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lastNameLabel;
     private javax.swing.JLabel othersLabel;
     private javax.swing.JLabel personalInformationLabel1;
+    private javax.swing.JLabel placeLabel;
     private javax.swing.JLabel street1DisplayLabel;
     private javax.swing.JLabel street1Label;
     private javax.swing.JLabel street2DisplayLabel;
